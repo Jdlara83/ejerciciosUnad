@@ -1,0 +1,217 @@
+
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+        <meta charset="UTF-8">
+        <title>Estadísticas Descriptivas - Heart Cleveland</title>
+        <style>
+          body { font-family: sans-serif; margin: 20px; background-color: #f9f9f9; }
+          h2 { color: #333; border-bottom: 2px solid #009879; padding-bottom: 5px;}
+          p { color: #555; }
+          .my_table {
+            border-collapse: collapse;
+            margin: 25px auto;
+            font-size: 0.9em;
+            min-width: 600px; 
+            max-width: 90%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border: 1px solid #ddd;
+          }
+          .my_table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: center;
+          }
+          .my_table th,
+          .my_table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+          }
+          .my_table th { font-weight: bold; }
+          .my_table td:first-child, 
+          .my_table th:first-child {
+            text-align: left;
+            background-color: #f3f3f3; 
+            font-weight: bold;
+          }
+          .my_table tbody td { text-align: right; }
+          .my_table tbody td:first-child { text-align: left; } 
+          .my_table tbody tr:nth-of-type(even) {
+            background-color: #f8f8f8;
+          }
+          .my_table tbody tr:hover {
+            background-color: #e8f4f2; 
+          }
+        </style>
+        </head>
+        <body>
+
+        <h2>Resumen Estadístico del Dataset</h2>
+        <p>A continuación se muestran las estadísticas descriptivas principales para las columnas numéricas del conjunto de datos.</p>
+
+        <table border="1" class="dataframe my_table stats_table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>sex</th>
+      <th>cp</th>
+      <th>trestbps</th>
+      <th>chol</th>
+      <th>fbs</th>
+      <th>restecg</th>
+      <th>thalach</th>
+      <th>exang</th>
+      <th>oldpeak</th>
+      <th>slope</th>
+      <th>ca</th>
+      <th>thal</th>
+      <th>condition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+      <td>297.00</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>54.54</td>
+      <td>0.68</td>
+      <td>2.16</td>
+      <td>131.69</td>
+      <td>247.35</td>
+      <td>0.14</td>
+      <td>1.00</td>
+      <td>149.60</td>
+      <td>0.33</td>
+      <td>1.06</td>
+      <td>0.60</td>
+      <td>0.68</td>
+      <td>0.84</td>
+      <td>0.46</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>9.05</td>
+      <td>0.47</td>
+      <td>0.96</td>
+      <td>17.76</td>
+      <td>52.00</td>
+      <td>0.35</td>
+      <td>0.99</td>
+      <td>22.94</td>
+      <td>0.47</td>
+      <td>1.17</td>
+      <td>0.62</td>
+      <td>0.94</td>
+      <td>0.96</td>
+      <td>0.50</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>29.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>94.00</td>
+      <td>126.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>71.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>48.00</td>
+      <td>0.00</td>
+      <td>2.00</td>
+      <td>120.00</td>
+      <td>211.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>133.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>56.00</td>
+      <td>1.00</td>
+      <td>2.00</td>
+      <td>130.00</td>
+      <td>243.00</td>
+      <td>0.00</td>
+      <td>1.00</td>
+      <td>153.00</td>
+      <td>0.00</td>
+      <td>0.80</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>61.00</td>
+      <td>1.00</td>
+      <td>3.00</td>
+      <td>140.00</td>
+      <td>276.00</td>
+      <td>0.00</td>
+      <td>2.00</td>
+      <td>166.00</td>
+      <td>1.00</td>
+      <td>1.60</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>2.00</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>77.00</td>
+      <td>1.00</td>
+      <td>3.00</td>
+      <td>200.00</td>
+      <td>564.00</td>
+      <td>1.00</td>
+      <td>2.00</td>
+      <td>202.00</td>
+      <td>1.00</td>
+      <td>6.20</td>
+      <td>2.00</td>
+      <td>3.00</td>
+      <td>2.00</td>
+      <td>1.00</td>
+    </tr>
+  </tbody>
+</table>
+
+        <p style="text-align:center; font-size:0.8em; color: #777;">Autor: Julian Lara:estadisticas_descriptiva,heart_cleveland_upload</p>
+
+        </body>
+        </html>
+        
